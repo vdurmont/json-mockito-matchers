@@ -3,12 +3,12 @@ json-mockito-matchers
 
 Mockito matchers that will help you to check the usage of [JSONObject](http://www.json.org/javadoc/org/json/JSONObject.html)s and [JSONArray](http://www.json.org/javadoc/org/json/JSONArray.html)s.
 
-# Dependencies
+## Dependencies
 
 * `org.mockito > mockito-core` version 1.9.5
 * `org.json > json` version 20140107
 
-# Usage
+## Usage
 
 Soon available on ~Maven Central Repository~.
 

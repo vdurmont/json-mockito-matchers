@@ -28,6 +28,7 @@ Write your tests:
 	import org.junit.runner.RunWith;
 	import org.junit.runners.JUnit4;
 	
+	import static com.github.vdurmont.JSONArrayMatcher.jsonEq;
 	import static com.github.vdurmont.JSONObjectMatcher.jsonEq;
 	import static org.mockito.Mockito.mock;
 	import static org.mockito.Mockito.verify;
@@ -37,7 +38,7 @@ Write your tests:
 		private static final MyMockedClass myMock = mock(MyMockedClass.class);
 
 		@Test
-		public void myTest() {
+		public void myTest_JSONObject() {
 			// GIVEN
 			MyService myService = new MyService(myMock);
 
@@ -45,11 +46,25 @@ Write your tests:
 			expected.put("data", "data");
 
 			// WHEN
-			this.myService.someMethod();
+			this.myService.someMethodForJSONObject();
 
 			// THEN
-			verify(myMock).myMethod(jsonEq(expected));
+			verify(myMock).myMethodForJSONObject(jsonEq(expected));
+		}
+
+		@Test
+		public void myTest_JSONArray() {
+			// GIVEN
+			MyService myService = new MyService(myMock);
+
+			JSONArray expected = new JSONArray();
+			expected.put("one");
+			expected.put("two");
+
+			// WHEN
+			this.myService.someMethodForJSONArray();
+
+			// THEN
+			verify(myMock).myMethodForJSONArray(jsonEq(expected));
 		}
 	}
-
-It also works with a JSONArray :)

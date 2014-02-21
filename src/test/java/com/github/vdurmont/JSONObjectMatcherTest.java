@@ -6,11 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import static com.github.vdurmont.JSONObjectMatcher.jsonEq;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 @RunWith(JUnit4.class)
 public class JSONObjectMatcherTest {
@@ -37,22 +34,6 @@ public class JSONObjectMatcherTest {
 		// THEN
 		assertFalse(new JSONObjectMatcher(expected).matches(actual));
 	}
-	@Test
-	public void myTest() {
-		// GIVEN
-		JSONObject expected = new JSONObject();
-		expected.put("data", "data");
-		// Build your expected object
-
-		// WHEN
-		this.myService.someMethod();
-
-		mock()
-
-		// THEN
-		verify(myMock).myMethod(jsonEq(expected));
-	}
-
 
 	@Test
 	public void matches_not_null_with_null_expected_is_false() {

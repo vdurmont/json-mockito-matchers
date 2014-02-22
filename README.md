@@ -22,14 +22,14 @@ Add the dependency in your `pom.xml`.
 	</dependency>
 
 Write your tests:
-	
+
 	import org.json.JSONObject;
 	import org.junit.Test;
 	import org.junit.runner.RunWith;
 	import org.junit.runners.JUnit4;
-	
-	import static com.github.vdurmont.JSONArrayMatcher.jsonEq;
-	import static com.github.vdurmont.JSONObjectMatcher.jsonEq;
+
+	import static com.github.vdurmont.mockito.matchers.JSONArrayMatcher.jsonEq;
+	import static com.github.vdurmont.mockito.matchers.JSONObjectMatcher.jsonEq;
 	import static org.mockito.Mockito.mock;
 	import static org.mockito.Mockito.verify;
 

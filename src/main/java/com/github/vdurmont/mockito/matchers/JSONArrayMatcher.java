@@ -1,27 +1,27 @@
-package com.github.vdurmont;
+package com.github.vdurmont.mockito.matchers;
 
 import org.hamcrest.Description;
-import org.json.JSONObject;
+import org.json.JSONArray;
 import org.mockito.ArgumentMatcher;
 
 import static org.mockito.Matchers.argThat;
 
-public class JSONObjectMatcher extends ArgumentMatcher<JSONObject> {
-	private final JSONObject expected;
+public class JSONArrayMatcher extends ArgumentMatcher<JSONArray> {
+	private final JSONArray expected;
 
-	public JSONObjectMatcher(JSONObject expected) {
+	public JSONArrayMatcher(JSONArray expected) {
 		this.expected = expected;
 	}
 
-	public static JSONObject jsonEq(JSONObject expected) {
-		return argThat(new JSONObjectMatcher(expected));
+	public static JSONArray jsonEq(JSONArray expected) {
+		return argThat(new JSONArrayMatcher(expected));
 	}
 
 	@Override
 	public boolean matches(Object argument) {
 		if (expected == null) return argument == null;
-		if (!(argument instanceof JSONObject)) return false;
-		JSONObject actual = (JSONObject) argument;
+		if (!(argument instanceof JSONArray)) return false;
+		JSONArray actual = (JSONArray) argument;
 		return expected.toString().equals(actual.toString());
 	}
 

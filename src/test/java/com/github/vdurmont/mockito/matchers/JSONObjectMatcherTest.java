@@ -1,5 +1,6 @@
-package com.github.vdurmont;
+package com.github.vdurmont.mockito.matchers;
 
+import com.github.vdurmont.mockito.matchers.JSONObjectMatcher;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;

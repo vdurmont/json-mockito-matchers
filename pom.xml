@@ -2,13 +2,36 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.vdurmont</groupId>
-    <artifactId>json-mockito-matchers</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.github.vdurmont.mockito</groupId>
+    <artifactId>json-matchers</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>json-mockito-matchers</name>
-    <url>http://maven.apache.org</url>
+    <description>JSON matchers for the Mockito framework.</description>
+    <url>https://github.com/vdurmont/json-mockito-matchers</url>
+
+    <developers>
+        <developer>
+            <id>vdurmont</id>
+            <name>Vincent DURMONT</name>
+            <email>vdurmont@gmail.com</email>
+            <url>http://vincent-durmont.com</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/vdurmont/json-mockito-matchers</url>
+        <connection>scm:git:git@github.com:vdurmont/json-mockito-matchers.git</connection>
+        <developerConnection>scm:git:git@github.com:vdurmont/json-mockito-matchers.git</developerConnection>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
